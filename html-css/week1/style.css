@@ -1,0 +1,202 @@
+/* reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*styling things I'm not gonna restyle over and over */
+body,html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 2.0em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+a{text-decoration: none;
+color: white;}
+
+a:hover{
+    color: orange;
+    font-size: 30px;
+    background:white;
+}
+
+
+/*navbar style*/
+.logo{
+    float: left;
+    text-decoration: none;
+    font-size: 30px;
+}
+.navbar{
+    position:fixed;
+    width: 100%;
+    background-color: purple;
+    overflow: auto;
+}
+.navbar h1{
+    padding: 10px;
+}
+
+.navbar ul{
+    float: right;
+    list-style: none;
+}
+.navbar ul li{
+    float: left;
+}
+.navbar ul li a{
+    display: block;
+    padding:10px;
+}
+
+/*styling showcase*/
+
+.showcase{
+    background:url("https://i.postimg.cc/4xfQ1f0P/image-3.jpg") no-repeat center center/cover;
+    height: 500px;
+}
+.showcase .showcase-content{
+    padding-top: 200px;
+    color: white;
+}
+
+.showcase-content h2{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.showcase-content h2 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+.showcase-content .btn a{
+    font-size:30px;
+    color:purple;
+    background:none; /*background none so basically
+    when you hover nothing happens unlike the other links*/
+    padding-top:10px;
+}
+
+/*styling Cv- trying to let them sit side by side but
+also not in a line. the idea is to make them look like a staircase
+from left to right*/
+
+.cv{
+    width: 100%;
+    height:900px;
+    max-height: 100%;
+}
+
+.cv .exp-skills h3,h4,h5,h6{
+    font-size: 30px;
+    color: purple;
+}
+.cv .exp-skills{
+    float:left;
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.exp-skills h4{
+    padding-top: 220px;
+}
+.cv .edu-hobby{
+    float:right;
+    widows: 50%;
+    padding-right: 20px;
+}.cv p{
+    padding-top: 400px;
+}
+
+.edu-hobby {
+    padding-top: 250px;
+}
+.edu-hobby h6{
+    padding-top: 200px;
+}
+
+/*styling resources*/
+
+#resources{
+    background:url(https://i.postimg.cc/J0N0kxBx/image-6.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    padding-top: 50px;
+}
+#resources h7{
+    font-size: 30px;
+    color:purple;
+}
+#resources ul {color:blue;}
+
+/*styling Hyf*/
+
+#hyf{
+    background: grey;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+#hyf h8{
+    font-size: 30px;
+    color:white;
+}
+#hyf ul li{
+    font-size: 30px;	
+    list-style: none;
+    display:inline;
+    padding: 30px;
+}
+
+/*styling contact*/
+
+#contact{
+    width: 100%;
+    height: 100%;
+}
+#contact h9{font-size: 30px;
+    color: purple;
+    margin-top: 50px;
+
+}
+#contact .left, .right{
+    display: inline-block;
+    padding: 20px;
+}
+
+
+#contact .btn a {	
+    color:purple;
+    font-size: 25px;
+}
+
+
+/*footer styling*/
+.foot{ background-color:purple;
+    width: 100%;
+    height: auto;
+}
+.foot ul{
+    display: inline-flex;
+    color:lightblue;
+    list-style: none;
+}
+
+.foot ul li{
+    padding: 20px;
+}
