@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form - Step 2</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <header>
+            <nav class="navbar">
+              <h1 class="logo"> LOGO </h1>
+              <div> 
+                  <ul><li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Contact</a></li>
+                      <li><a href="#">Help</a></li>
+                  </ul>
+               </div>
+            </nav>
+          </header>
+
+        <form action="" method="">
+            <div class="form-container">
+                
+                        <h2>Sign up to your customtailor.com</h2>
+                        <h3>Step 2/4 - how can we reach you?</h3>
+                        
+              <p>progress <br>
+               <progress value="50" max="100">30%</progress><br>
+            </p>
+            <p>
+                We will probably need to stay in touch somehow. Let us know how we can reach you?
+            </p>
+            <div>
+              <div>
+                  <label for="email">Email*</label>
+                  <input type="email" name="email" id="email" required>
+                  <label for="phone">Phone</label>
+                  <input type="number" name="number" id="number">
+              </div>
+              <div>
+                  <label for="password">Password*</label>
+                  <input type="password" name="password" id="password" pattern="^[a-z])[A-Z])*$" minlength="10" required>
+              </div>
+              <div>
+                <label for="password">Re-enter password*</label>
+                <input type="password" name="password" id="password" pattern="^[a-z][A-Z])*$" minlength="10" required>
+              </div>
+                 <P class="dark-color">I want to sign up for newsletter</P>
+                <div>    
+                <label for="newsletter">weekly news</label>
+                <input type="radio" name="newsletter" value="weekly news" id="newsletter" checked>
+                <label for="newsletter">Monthly news</label>
+                <input type="radio" name="newsletter" id="newsletter" value="monthly news">
+                <label for="newsletter">Don't send me news</label>
+                <input type="radio" name="newsletter" id="newsletter" value="don't send me news">
+              </div>
+            </div>
+
+              <div class="form-buttons">
+                  <button><a href="index.html">Go to previous</a></button>
+                  <button><a href="step3.html">Next step</a></button>
+              </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

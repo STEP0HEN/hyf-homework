@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*General styling for all pages*/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+}
+ .main-container{
+    line-height: 3em;
+    background-color: blanchedalmond;
+    width: 90%;
+    align-content: center;
+    text-align: center;
+    margin: 30px 30px;
+    padding: 20px;
+    overflow:auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    height: 100%;
+}
+
+.form-container{
+    width: 90%;
+    padding: 20px;
+}
+img{
+    width: 70%;
+    height: auto;
+}
+
+.form-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/*targetting all links on the pages*/
+a{text-decoration: none;
+color: black;}
+
+/*targetting progress bar on all pages and giving it height and width*/
+
+progress{
+    width: 50%;
+    height: 50px;
+    background-color: cyan;
+}
+
+/*targetting all buttons and giving them width & height*/
+button{
+    width: 90px;
+    height: 40px;
+    margin: 30px;
+}
+
+/*Navbar styling*/
+ .navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.navbar h1{
+    letter-spacing: 10px;
+    color: grey;
+    padding: 5px;
+    background-color:honeydew;
+}
+
+ .navbar ul{
+    list-style-type: none;
+    background-color: honeydew;
+    display: flex;
+    width: 200px;
+    height: 50px;
+
+}
+
+ .navbar ul li{
+     display: flex;
+     justify-content: space-evenly;
+     width: 200px;
+     height: auto;
+ }
+
+ .navbar a{
+     text-decoration: none;
+     color: grey;
+ }
+
+ .next-page{
+     position: fixed;
+     bottom: 0px;
+     right: 0px;
+     padding-right: 20px;
+ }
+
+/*page 1 only stytling*/
+
+.profile-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.profile-description span{
+    font-size: 10px;
+    color: grey;
+    line-height: 1em;
+    line-clamp: ;
+}
+/*This is to style Page 3 only*/
+
+.items-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-choices .choices-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.image-choices .choices-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%}
+
+    .image-choices img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .image-choices p{
+        color: rebeccapurple;
+    }
+    
+
+
+    @media only screen and (min-width: 450px) and (max-width: 799px) {
+        .main-container {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+             }
+             .navbar{
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: space-between;
+                 
+            }
+            }

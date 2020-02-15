@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form - step 4</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+          <nav class="navbar">
+            <h1> LOGO </h1>
+            <div> 
+                <ul><li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+             </div>
+          </nav>
+        </header>
+        
+        <form action="" >
+            <div class="form-container">
+                        <h2>Sign up to your customtailor.com</h2>
+                        <h3>Step 4/4 - Payment</h3>
+               <p>Progress <br><progress value="90" max="100">90%</progress></p>
+               <p>Please fill in your payment data</p>
+            
+               <div class="payment-container">
+                   <div>
+                       <label for="name-on-card">Name on card</label>
+                       <input type="text" name="name-on-card" id="name-on-card" required>
+                   </div>
+                   <div>
+                       <label for="card-type">Card type</label>
+                       <select name="card-type" id="card-type" required>
+                           <option value="none"></option>
+                           <option value="Master-card">Master card</option>
+                           <option value="Visa-dankort">Visa Dankort</option>
+                           <option value="Visa-International">Visa International</option>
+                       </select>
+                   </div>
+                   <div>
+                       <label for="card-number">Credit card number</label>
+                       <input type="tel" name="card-number" id="card-number" pattern="^[0-9]*$" minlength="16" maxlength="16" required>
+                       <label for="first-name">First name</label>
+                       <input type="text" name="first-name" id="first-name">
+                   </div>
+                   <div>
+                       <label for="expiry-month">Expiry month</label>
+                       <input type="text" name="expiry-month" id="expiry-month" minlength="2" maxlength="2" placeholder="- -" required>
+
+                       <label for="expiry-year">Expiry year</label>
+                       <input type="text" minlength="4" maxlength="4" pattern="^[0-9]*$" required/>
+                   </div>
+                   <div>
+                       <label for="cvv">CVV</label>
+                       <input type="password" name="cvv" id="cvv" minlength="3" maxlength="3" placeholder="- - -" required>
+                   </div>
+
+               </div>
+                
+             
+             <div class="form-buttons">
+                <button><a href="step3.html">Go to previous page</a></button>
+                 <button type="submit">submit</button>
+            </div>  
+                 
+            </div>  
+        </form>
+    </div>
+</body>
+</html>
