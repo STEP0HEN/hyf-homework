@@ -1,0 +1,1 @@
+Second file created for the day using git, did it by writitng (touch apples.txt)
