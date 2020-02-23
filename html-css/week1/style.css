@@ -27,6 +27,10 @@ a:hover{
     background:white;
 }
 
+ul{
+    list-style-type:none;
+}
+
 
 /*navbar style*/
 .logo{
@@ -34,12 +38,14 @@ a:hover{
     text-decoration: none;
     font-size: 30px;
 }
+
 .navbar{
     position:fixed;
     width: 100%;
     background-color: purple;
     overflow: auto;
 }
+
 .navbar h1{
     padding: 10px;
 }
@@ -48,9 +54,11 @@ a:hover{
     float: right;
     list-style: none;
 }
+
 .navbar ul li{
     float: left;
 }
+
 .navbar ul li a{
     display: block;
     padding:10px;
@@ -62,6 +70,7 @@ a:hover{
     background:url("https://i.postimg.cc/4xfQ1f0P/image-3.jpg") no-repeat center center/cover;
     height: 500px;
 }
+
 .showcase .showcase-content{
     padding-top: 200px;
     color: white;
@@ -84,8 +93,7 @@ a:hover{
 .showcase-content .btn a{
     font-size:30px;
     color:purple;
-    background:none; /*background none so basically
-    when you hover nothing happens unlike the other links*/
+    background:none;
     padding-top:10px;
 }
 
@@ -99,32 +107,40 @@ from left to right*/
     max-height: 100%;
 }
 
-.cv .exp-skills h3,h4,h5,h6{
+.cv .exp-skills h3{
     font-size: 30px;
     color: purple;
 }
+
 .cv .exp-skills{
     float:left;
     width: 50%;
     padding-top: 20px;
     padding-left: 20px;
 }
-.exp-skills h4{
+
+.exp-skills h3{
     padding-top: 220px;
 }
+
 .cv .edu-hobby{
     float:right;
     widows: 50%;
     padding-right: 20px;
-}.cv p{
+}
+
+.cv p{
     padding-top: 400px;
 }
 
 .edu-hobby {
     padding-top: 250px;
 }
-.edu-hobby h6{
-    padding-top: 200px;
+
+.edu-hobby h3{
+    font-size: 30px;
+    color: purple;
+    padding-top: 50px;
 }
 
 /*styling resources*/
@@ -136,10 +152,12 @@ from left to right*/
     height: 400px;
     padding-top: 50px;
 }
-#resources h7{
+
+#resources h3{
     font-size: 30px;
     color:purple;
 }
+
 #resources ul {color:blue;}
 
 /*styling Hyf*/
@@ -152,10 +170,11 @@ from left to right*/
     height: auto;
 }
 
-#hyf h8{
+#hyf h3{
     font-size: 30px;
     color:white;
 }
+
 #hyf ul li{
     font-size: 30px;	
     list-style: none;
@@ -169,11 +188,13 @@ from left to right*/
     width: 100%;
     height: 100%;
 }
-#contact h9{font-size: 30px;
+
+#contact h3{font-size: 30px;
     color: purple;
     margin-top: 50px;
 
 }
+
 #contact .left, .right{
     display: inline-block;
     padding: 20px;
@@ -191,6 +212,7 @@ from left to right*/
     width: 100%;
     height: auto;
 }
+
 .foot ul{
     display: inline-flex;
     color:lightblue;
@@ -200,3 +222,20 @@ from left to right*/
 .foot ul li{
     padding: 20px;
 }
+
+@media only screen and (min-width: 450px) and (max-width: 799px) {
+    body {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+         }
+
+         .navbar{
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             width: 100%;
+             
+        }
+        }

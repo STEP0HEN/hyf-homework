@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -6,166 +6,242 @@
 
 /*General styling for all pages*/
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     background-color: white;
 }
- .main-container{
+
+ .main-container {
     line-height: 3em;
     background-color: blanchedalmond;
     width: 90%;
     align-content: center;
-    text-align: center;
-    margin: 30px 30px;
+    margin: 30px;
     padding: 20px;
     overflow:auto;
+    border: 2px solid black;
 }
 
-form{
+h2, h3, p, .newsletter {
+      text-align: center;
+  }
+
+form {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
-.form-container{
-    width: 90%;
+.form-container {
+    width: 100%;
     padding: 20px;
+    align-content: center;
+    margin-left: 15%;
 }
-img{
+
+img {
     width: 70%;
     height: auto;
 }
 
-.form-buttons{
+.form-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 5px;
+}
+
+.form-container label {
+     display: inline-block;
+     width: 200px;
+     text-align:right;
 }
 
 /*targetting all links on the pages*/
-a{text-decoration: none;
-color: black;}
+a {
+    text-decoration: none;
+    color: black;
+ }
 
 /*targetting progress bar on all pages and giving it height and width*/
 
-progress{
+progress {
     width: 50%;
     height: 50px;
-    background-color: cyan;
+    background-color: rgb(121, 173, 173);
 }
 
 /*targetting all buttons and giving them width & height*/
-button{
+button {
     width: 90px;
     height: 40px;
     margin: 30px;
 }
 
 /*Navbar styling*/
- .navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: auto;
 }
-.navbar h1{
+
+.navbar h1 {
     letter-spacing: 10px;
     color: grey;
     padding: 5px;
     background-color:honeydew;
 }
 
- .navbar ul{
+.navbar ul {
     list-style-type: none;
     background-color: honeydew;
     display: flex;
-    width: 200px;
+    width: 300px;
     height: 50px;
-
 }
 
- .navbar ul li{
+.navbar ul li {
      display: flex;
      justify-content: space-evenly;
      width: 200px;
      height: auto;
- }
+}
 
- .navbar a{
+.navbar a {
      text-decoration: none;
      color: grey;
- }
+}
 
- .next-page{
-     position: fixed;
-     bottom: 0px;
-     right: 0px;
-     padding-right: 20px;
- }
 
 /*page 1 only stytling*/
 
-.profile-description{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.profile-description textarea {
+    width:50%;
+    height:auto;
 }
 
-.profile-description span{
+.profile-description span {
+    display: inline-block;
     font-size: 10px;
     color: grey;
-    line-height: 1em;
-    line-clamp: ;
+    line-height: 2em;
+    
 }
+
 /*This is to style Page 3 only*/
 
-.items-container{
+.items-container {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 
-.image-choices .choices-top{
+.image-choices .choices-top {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
 }
 
-.image-choices .choices-bottom{
+.image-choices .choices-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%}
+    width: 100%
+}
 
-    .image-choices img{
-        width: 100px;
-        height: 100px;
-    }
+.image-choices img {
+    width: 230px;
+    height: 200px;
+}
 
-    .image-choices p{
+.image-choices p, .dark-color {
+    font-weight: bold;
         color: rebeccapurple;
-    }
+}
     
 
 
-    @media only screen and (min-width: 450px) and (max-width: 799px) {
-        .main-container {
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-             }
-             .navbar{
-                 display: flex;
-                 flex-direction: row;
-                 justify-content: space-between;
-                 
-            }
+/*Media Queries / Responsive layout*/
+
+    @media only screen and (max-width: 450px) {
+       body{
+           font-family: 'Times New Roman', Times, serif;
+           width: 100%;
+           background-color: blue;
+           line-height: 1em;
+       }
+
+       .main-container {
+           width: 90%;
+           background-color: white;
+       }
+
+       p {
+           font-size: 12px;
+       }
+
+       .navbar {
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+       }
+
+       .navbar h1,.navbar ul {
+           background-color: unset;
+       }
+
+
+       .form-container label {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+       }
+
+       .profile-description textarea {
+           width: 100%;
+           height: auto;
+       }
+       
+       .form-container input, .form-container select {
+           font-size: 12px;
+           display: inline-block;
+           text-align:center;
+           width: 100%;
+       }
+
+       .form-container label, .form-container input {
+           display: flex;
+       }
+
+       textarea {
+           width: 100%;
+           height: auto;
+       }
+
+       .image-choices img {
+           width: 100px;
+           height: 100px;
+       }
+
+       .disp-rw {
+           display: flex;
+           flex-direction: row;
+       }
+
+       .newsletter {
+           display: flex;
+           flex-direction: row;
+           width: 100%;
+           height: auto;
+       }
+
             }

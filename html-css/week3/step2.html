@@ -30,11 +30,11 @@
                         
               <p>progress <br>
                <progress value="50" max="100">30%</progress><br>
-            </p>
-            <p>
+             </p>
+             <p>
                 We will probably need to stay in touch somehow. Let us know how we can reach you?
             </p>
-            <div>
+            <div class="form-fill">
               <div>
                   <label for="email">Email*</label>
                   <input type="email" name="email" id="email" required>
@@ -49,14 +49,16 @@
                 <label for="password">Re-enter password*</label>
                 <input type="password" name="password" id="password" pattern="^[a-z][A-Z])*$" minlength="10" required>
               </div>
+
                  <P class="dark-color">I want to sign up for newsletter</P>
-                <div>    
-                <label for="newsletter">weekly news</label>
-                <input type="radio" name="newsletter" value="weekly news" id="newsletter" checked>
-                <label for="newsletter">Monthly news</label>
-                <input type="radio" name="newsletter" id="newsletter" value="monthly news">
-                <label for="newsletter">Don't send me news</label>
-                <input type="radio" name="newsletter" id="newsletter" value="don't send me news">
+              
+               <div class="newsletter">    
+                  <label for="newsletter">weekly news</label>
+                  <input type="radio" name="newsletter" value="weekly news" id="newsletter" checked>
+                  <label for="newsletter">Monthly news</label>
+                  <input type="radio" name="newsletter" id="newsletter" value="monthly news">
+                  <label for="newsletter">Don't send me news</label>
+                  <input type="radio" name="newsletter" id="newsletter" value="don't send me news">
               </div>
             </div>
 
