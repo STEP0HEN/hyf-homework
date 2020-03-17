@@ -3,12 +3,13 @@
 
 // Event Application
 
+ const weekdays = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]
  
- 
-function getEventWeekday(days) {
-    const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + days);
-    console.log(eventDate);
+function getEventWeekday(event) {
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
+    const day = (currentDay + event) % 7;
+    return `${weekdays [day]}` ;
+    
   }
-  getEventWeekday(3);
-
+  console.log(getEventWeekday(5));

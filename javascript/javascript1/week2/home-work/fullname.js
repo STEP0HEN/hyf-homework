@@ -9,10 +9,11 @@ function getFullname(firstName, surname, useFormalName) {
     else if (useFormalName !== useFormalName) {
         return firstName + ' ' + surname
     }
+    else
     return firstName + ' ' + surname;
 
 }
-const Fullname = getFullname('Benjamin', 'Hughes',true);
+const Fullname = getFullname('Benjamin', 'Hughes',true); //
 console.log(Fullname);
 
 console.log(getFullname('Benjamin', 'hughes', false))
@@ -21,5 +22,5 @@ console.log(getFullname('Benjamin', 'hughes', false))
 const fullname1 = (getFullname('James','Rasmussen'));
 console.log(fullname1)
 
-const fullname2 = (getFullname('Ida','john', false));
+const fullname2 = (getFullname('Ida','john'));
 console.log(fullname2)
