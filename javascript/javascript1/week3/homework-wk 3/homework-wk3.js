@@ -4,9 +4,7 @@
 // Item Array Removal
 
 const names = ['Peter', 'Ahmad', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala'];
-const nameToRemove = ('Ahmad');
-//names.splice(1,1);
-
+const nameToRemove = 'Ahmad';
 for ( let i = 0 ; i < names.length ; i++) {
   if (names[i] === nameToRemove) {
     names.splice(i ,1) ;
@@ -62,8 +60,8 @@ const seriesDurations = [
 
 const lifeSpanInhours = 80* 365 * 24;
 
-function sumTotalOfHoursSpent(object){
-    const daysInHours = object.days*24 + object.hours +  (object.minutes/60)
+function sumTotalOfHoursSpent(seriesDurationsObject){
+    const daysInHours = seriesDurationsObject.days*24 + seriesDurationsObject.hours +  (seriesDurationsObject.minutes/60)
     return daysInHours
 }
 
@@ -82,7 +80,6 @@ for (let i = 0; i < seriesDurations.length; i++) {
   console.log(`${seriesDurations[i].title} took ${allHoursSpentperMovies.toFixed(4)} % of my life`);
 }
 console.log(`In total that is ${totalHoursSpent.toFixed(4)} % of my life.`)
- 
 
 //Song database
 
@@ -195,7 +192,7 @@ function getNoteFromId(id) {
     if (id === notes[i].id) {
       return notes[i];
     } 
-    if (id !== Number && !id ) {
+    if (typeof id !== Number ) {
       return 'wrong format, please id should be a number and not an empty field'
     }
     else {
