@@ -27,18 +27,10 @@ renderProducts(products);
 
 // Searching for products
 
-
-let sortedProducts = products;
-function filter() {
-    let value = document.getElementById('input').value;
-    sortedProducts = sortedProducts.filter(prod => prod.name.toLowerCase() === value);
-    renderProducts(sortedProducts);
-}
-
-//document.getElementById('mybutton').addEventListener('click', filter);
-
-
-document.querySelector(".search > input").addEventListener('keyup', (event) => {
-    let filteredProduct = products.filter(product => product.name === event.target.value)});
-    
-//const searchWord = document.getElementById('input').value
+const inputElement = document.querySelector(".search > input")
+inputElement.addEventListener('keyup', (event) => {
+    const filteredProduct = products.filter(product => product.name === event.target.value)
+    const productsUlTag = document.querySelector('section.products ul')
+    productsUlTag.innerHTML = "";
+      renderProducts(filteredProduct);
+    });
