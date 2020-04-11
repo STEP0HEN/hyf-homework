@@ -13,20 +13,24 @@ let eventList = 'What am I doing this week'
 
 
 function getReply(command) {
+    let commandArray = command.split(' ')
     
     //Saving the person's name and returning nice to meet you plus the person's name
     if (command.startsWith('Hello') && command.includes('name')) {
-          let commandArray = command.split(' ')
           let name = commandArray[commandArray.length -1]
-          names.push(name)
-        
-        return `Nice to meet you ${names[names.length -1]}`;
-    }
+          
+          if(names.includes(name)) {
+              return `You have already introduced yourself`
+        } else {
+            names.push(name)    
+            return `Nice to meet you ${name}`;
+        }
+    } 
     
-    //If you ask for your name and you have introduced yourself you'll get your name
+    //If you ask for your name and you have introduced yourself
     if(command === whoAmI && names.length !== 0) {
-        return `Your name is ${names[names.length -1]}`; 
-    
+        let personName = names[names.length -1]
+        return `Your name is ${personName}`; 
     }
     //If you ask for your name without introducing yourself
     if (command === whoAmI && names.length === 0) {
@@ -45,25 +49,50 @@ function getReply(command) {
         return `Today is ${day}. of ${monthsOfTheYear[month]} ${year}`;
         
     }
-     if (command.includes('what is') && command.split(' ')[command.split(' ').length-1] === Number) {
-
-        let mathEquation = command.split(' ')
-        console.log(mathEquation)
-    }  
     
+    if (command.includes('+') && typeof(+(commandArray[2]) === Number)) {
+
+         let x = +commandArray[2]
+         let y = +commandArray[4]
+         let answer = x + y
+         return `${answer}`
+    }  
+
+    if (command.includes('-') && typeof(+(commandArray[2]) === Number)) {
+
+        let x = +commandArray[2]
+        let y = +commandArray[4]
+        let answer = x - y
+        return `${answer}`
+   }
+
+   if (command.includes('*') && typeof(+(commandArray[2]) === Number)) {
+
+    let x = +commandArray[2]
+    let y = +commandArray[4]
+    let answer = x * y
+    return `${answer}`
+    }
+    if (command.includes('/') && typeof(+(commandArray[2]) === Number)) {
+
+    let x = +commandArray[2]
+    let y = +commandArray[4]
+    let answer = x / y
+    return `${answer}`
+    }
     //Adding things to todo
     if (command.startsWith("Add") && command.endsWith("todo")){
-            let addTodoWord = command.split(' ');
-            let wordToAdd = addTodoWord[1]
+            let wordToAdd = commandArray[1]
             todo.push(wordToAdd);
 
         return `${wordToAdd} added to your todo`;
-    }     
+    }
+
     //Removing things from todo
     if (command.startsWith('Remove') && command.endsWith('todo')) {
-         let removeTodoWord = command.split(' ');
-         let wordToRemove = removeTodoWord[1]
+         let wordToRemove = commandArray[1]
 
+         todo.splice(todo.indexOf (wordToRemove),1)
         return`${wordToRemove} removed from your todo`
     }
     //Logging out todo
@@ -73,21 +102,19 @@ function getReply(command) {
     }
     //Saving favorite dish 
     if (command.startsWith('My favorite') && command.includes('dish')) {
-            let dishWordArray = command.split(' ')
-            let dishWord = dishWordArray[dishWordArray.length -1]
+            let dishWord = commandArray[commandArray.length -1]
             favDish.push(dishWord)
         return `favorite dish saved`    
     }
     //Logging out favorite dish
-    if (command.startsWith('What is') && command.endsWith('favorite dish') && favDish.length !== 0) {
+    if (command.startsWith('What is my') && command.endsWith('favorite dish') && favDish.length !== 0) {
             
         return `Your favorite dish is ${favDish.join( " and ")}`
     }
     //Setting timer
     if (command.startsWith('Set a timer')) {
-        let timerArray = command.split(' ')
-        let counter = timerArray[5]
-        let timeForAlarm = timerArray[4]
+        let counter = commandArray[5]
+        let timeForAlarm = commandArray[4]
         let timeToMillisecond = timeForAlarm*60*1000
           
         //Giving out alarm when time is up
@@ -98,9 +125,8 @@ function getReply(command) {
     }
     //Adding things to calendar
     if (command.startsWith('Add') && command.endsWith('calendar')) {
-            let thingsOnCalendarArray = command.split(' ')
-            let thingsToAddTOCalendar = thingsOnCalendarArray[1]
-            let thingsToAddTOCalendarDate = thingsOnCalendarArray[3]
+            let thingsToAddTOCalendar = commandArray[1]
+            let thingsToAddTOCalendarDate = commandArray[3]
             event.push({name: thingsToAddTOCalendar, date: thingsToAddTOCalendarDate})
                 
         return `${thingsToAddTOCalendar} on ${thingsToAddTOCalendarDate} added to your calendar `
@@ -111,11 +137,15 @@ function getReply(command) {
         
         return `You have ${event.length} event in your calendar : ${event[0].name} on ${event[0].date}`
     }
+    else {
+        return `Wrong input, please put in a valid input`
+    }
 
 }
 
 
 console.log(getReply('What is my name')) 
+console.log(getReply('Hello my name is Benjamin'))
 console.log(getReply('Hello my name is Benjamin'))
 console.log(getReply('What is my name')) 
 console.log(getReply('What day is it today')) 
@@ -129,5 +159,11 @@ console.log(getReply('What is my favorite dish'))
 console.log(getReply('Set a timer for 5 minute'))
 console.log(getReply('Add conference the 3/5/2019 to my calendar'))
 console.log(getReply('What am I doing this week'))
-
-
+console.log(getReply('what is 6 + 3'))
+console.log(getReply('How are you today')) //wrong input
+console.log(getReply('what is 3 - 3'))
+console.log(getReply('what is 3 * 3'))
+console.log(getReply('what is 3 / 3'))
+console.log(getReply('Hello my name is John'))
+console.log(getReply('Hello my name is John'))
+console.log(getReply('What is my name'))
