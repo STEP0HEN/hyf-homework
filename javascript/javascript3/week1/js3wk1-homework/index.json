@@ -1,0 +1,51 @@
+ {
+    "footballClubs" :[
+    {
+    "name" :"fc Barcelona",
+    "country": "Spain",
+    "league":"la liga",
+    "position " : 1,
+    "bestPlayer" : "Lionel Messi",
+    "competitions":["la liga", "Copa del rey", "ucl"],
+    "currentTitle":"la liga champions"
+    },
+    {
+    "name" :"Bayern Munich ",
+    "league":"Bundesliga",
+    "country":"Germany",
+    "position" :1,
+    "bestPlayer" : "Alcantara",
+    "competitions":["Bundesliga", "ucl ", "DFB pokal "],
+    "currentTitle":"Bundesliga champions"
+    },
+    {
+    "name" :"Paris Saint Germain",
+    "league":"ligue 1",
+    "County":"France",
+    "position" :1,
+    "bestPlayer" : "Neymar",
+    "competitions":["ligue 1", "ucl ", "coupe de France"],
+    "currentTitle":"ligue 1 champions"
+    },
+    {
+    "name" :"Liverpool",
+    "league":"English Premier league",
+    "County":"England",
+    "position" :1,
+    "bestPlayer" : "Mane",
+    "competitions":["EPL", "ucl ", "FA Cup"],
+    "currentTitle":"ucl champions"
+    },
+    {
+    "name" :"FC København",
+    "league":"Denmark Superliga",
+    "County":"Denmark",
+    "position" :1,
+    "bestPlayer" : "Carlos Zeca",
+    "competitions":["ligue 1", "ucl ", "coupe de France"],
+    "currentTitle":"ligue 1 champions"
+    }
+    ]
+    }
+    
+    
