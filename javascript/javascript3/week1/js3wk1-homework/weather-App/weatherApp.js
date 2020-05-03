@@ -23,6 +23,10 @@ function timeConverter(UNIX_timestamp){
   }
 
 const fetchWeatherData = () => {
+    if(!city.value) {
+        cityName.innerHTML = 'please enter valid city name'
+} else {
+
     const weatherUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=602668c30966286a5134f9422539b171`
     fetch (weatherUrl)
     .then(response => response.json())
@@ -35,18 +39,16 @@ const fetchWeatherData = () => {
         const howClowdy = weatherData.weather[0].description
         const sunrise = timeConverter(weatherData.sys.sunrise);
         const sunset = timeConverter(weatherData.sys.sunset)
-
         
-    cityName.innerHTML = chosenCity
-    temperatureOutput.innerHTML =`${Math.floor(temperature - 273.15)} &deg`
-    weatherIconOutput.src =`http://openweathermap.org/img/w/${weatherIconType}.png`
-    windSpeedOutput.innerHTML = `wind speed : ${windSpeed} m/s`
-    howClowdyOutput.innerHTML = howClowdy
-    sunriseOutput.innerHTML = `sunrise : ${sunrise}`
-    sunsetOutput.innerHTML = `Sunset : ${sunset}`
-})
-    if(!city.value) {
-        cityName.innerHTML = 'please enter valid city name'
+        
+        cityName.innerHTML = chosenCity
+        temperatureOutput.innerHTML =`${Math.floor(temperature - 273.15)} &deg`
+        weatherIconOutput.src =`http://openweathermap.org/img/w/${weatherIconType}.png`
+        windSpeedOutput.innerHTML = `wind speed : ${windSpeed} m/s`
+        howClowdyOutput.innerHTML = howClowdy
+        sunriseOutput.innerHTML = `sunrise : ${sunrise}`
+        sunsetOutput.innerHTML = `Sunset : ${sunset}`
+    })
 }
 }
 submitButton.addEventListener("click",fetchWeatherData)

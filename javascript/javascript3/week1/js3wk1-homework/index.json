@@ -1,4 +1,7 @@
- {
+//Create a json file
+
+
+{
     "footballClubs" :[
     {
     "name" :"fc Barcelona",
@@ -44,8 +47,6 @@
     "bestPlayer" : "Carlos Zeca",
     "competitions":["ligue 1", "ucl ", "coupe de France"],
     "currentTitle":"ligue 1 champions"
-    }
-    ]
-    }
-    
-    
+      }
+   ]
+}
