@@ -36,8 +36,12 @@ ul{
     width: 20%;
 }
 
-.player-S, .player-L {
+.player-S, .player-L,.player-s-count, .player-l-count {
     color: blue;
+}
+
+.alert-message{
+    color: red;
 }
 
 .result {

@@ -87,16 +87,18 @@ document.addEventListener('dblclick',checkForDoubleClick);
 
 //Warm up Nine (JOKE CREATOR FUNCTION)
 
+const randomIndex = (array) => {
+    return Math.floor(Math.random() * array.length)
+}
+
 function logFunnyJoke() {
     const funnyJokes = ['what type of shoes do frogs wear : open toad', 'why can\'t a bike stand on it own : because it\'s two tired','why can\'t you trust an atom : because they make up everything' ]
-    const randomFunnyJokes = Math.floor(Math.random() * funnyJokes.length)
-    console.log(funnyJokes[randomFunnyJokes])
+    console.log(funnyJokes[randomIndex(funnyJokes)])
 }
 
 function logBadJoke() {
     const badJokes = ['This is a bad joke', 'this is another bad joke','and here goes the last bad joke']
-    const randomBadJokes = Math.floor(Math.random() * badJokes.length)
-    console.log(badJokes[randomBadJokes])
+    console.log(badJokes[randomIndex(badJokes)])
 }
 function jokeCreator(shouldTellFunnyJoke,logFunnyJoke, logBadJoke) {
     
@@ -131,7 +133,7 @@ const arrayOfFunctions = [
     }
 ]
 
-arrayOfFunctions.forEach(logfunctions => logfunctions())
+arrayOfFunctions.forEach(logfunction => logfunction())
 
 
 

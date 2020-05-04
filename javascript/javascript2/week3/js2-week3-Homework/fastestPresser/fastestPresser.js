@@ -6,10 +6,9 @@ const playerS = document.querySelector('.player-S')
 const playerL = document.querySelector('.player-L')
 const result = document.querySelector('.result')
 const restart = document.querySelector('.restart')
-const newUlTag = document.createElement('ul')
-const ulTag = document.createElement('ul')
-playerS.appendChild(newUlTag)
-playerL.appendChild(ulTag)
+const playerSUlTag = document.querySelector('.player-s-count')
+const PlayerLUlTag = document.querySelector('.player-l-count')
+const alertMessage = document.querySelector('.alert-message')
 
 let counterL = 0;
 let counterS = 0;
@@ -18,9 +17,11 @@ let counterS = 0;
 function beginGame () {
     setTimeout(()=>{
 if(!timeInput.value){
-    alert('please enter time to play game')
+    alertMessage.innerHTML = 'please enter time to play game'
     !gameResult
-}else alert('Game over')
+}else {
+    alertMessage.innerHTML = 'Game over'
+}
 
 const gameResult = () => {
     if(counterS > counterL) {
@@ -45,27 +46,20 @@ gameStart.addEventListener('click', beginGame)
 function keyPressCount (keyboardPress) {
     if(keyboardPress.key === 'l') {
         counterL++
-        ulTag.innerHTML = `${counterL}`
+        PlayerLUlTag.innerHTML = `${counterL}`
         console.log(`${counterL}`)
     }
     if(keyboardPress.key === 's') {
         counterS++
-        newUlTag.innerHTML = `${counterS}`
+        playerSUlTag.innerHTML = `${counterS}`
         console.log(`${counterS}`)
     }
      if (!timeInput.value){
-        ulTag.innerHTML = null
-        newUlTag.innerHTML = null
+        playerSUlTag.innerHTML = null
+        PlayerLUlTag.innerHTML = null
         counterS = null
         counterL = null
     }
 }
 
 document.addEventListener('keypress',keyPressCount)
-
-
-//Restart section
-function startOver () {
-    location.reload()
-}
-restart.addEventListener('click',startOver);

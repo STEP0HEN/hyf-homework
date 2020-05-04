@@ -11,18 +11,26 @@
         <h1>Fastest Presser</h1>
         <input type="number" name="number" id="numberInput" placeholder="please set playing time">
     </div>
+    <h2 class="alert-message"></h2>
     <div>
         <button id="btn1"> Start Game </button><hr class="horizontal">
 
     </div>
     <div class="players">
-        <p class="player-S">Player S</p><hr>
-        <p class="player-L">Player L</p>
+        <div>
+            <p class="player-S">Player S</p>
+            <ul class="player-s-count"></ul>
+        </div>
+        <hr> 
+        <div>
+
+            <p class="player-L">Player L</p>
+            <ul class="player-l-count"></ul>
+        </div>
     </div>
     <div class="ending">
         <canvas id="my-canvas"></canvas>
         <p class="result"></p>
-        <button class="restart">Restart</button>
     </div>
     <script src="fastestPresser.js"></script>
 </body>
