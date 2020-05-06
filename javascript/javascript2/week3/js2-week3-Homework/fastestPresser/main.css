@@ -1,0 +1,50 @@
+
+body {
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 2rem;
+    background-color: aquamarine;
+}
+
+h1{
+    font-style:italic;
+}
+
+.horizontal{
+    width: 40%;
+    height: 1px;
+    margin-left:-20%;
+    }
+
+hr{
+    position: absolute;
+    left: 50%;
+    padding-top: 0px;
+    height: 15rem;
+    font-weight: bolder;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+.players{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.player-S, .player-L,.player-s-count, .player-l-count {
+    color: blue;
+}
+
+.alert-message{
+    color: red;
+}
+
+.result {
+    color: chocolate;
+    font-size: 30px;
+}
