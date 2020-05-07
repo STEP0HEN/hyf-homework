@@ -1,15 +1,15 @@
 
 "Use strict"
 
-const submitButton = document.querySelector("#submitButton")
-const city = document.querySelector("#cityInput")
-const cityName = document.querySelector(".cityNameOutput")
-const temperatureOutput = document.querySelector(".temperatureOutput")
-const weatherIconOutput = document.querySelector(".weatherIconOutput")
-const windSpeedOutput = document.querySelector(".windSpeedOutput")
-const howClowdyOutput = document.querySelector(".howClowdyOutput")
-const sunriseOutput = document.querySelector(".sunriseOutput")
-const sunsetOutput = document.querySelector(".sunsetOutput")
+const submitButton = document.querySelector("#submit-button")
+const city = document.querySelector("#city-input")
+const cityName = document.querySelector(".city-name-output")
+const temperatureOutput = document.querySelector(".temperature-output")
+const weatherIconOutput = document.querySelector(".weather-icon-output")
+const windSpeedOutput = document.querySelector(".windspeed-output")
+const howClowdyOutput = document.querySelector(".how-clowdy-output")
+const sunriseOutput = document.querySelector(".sunrise-output")
+const sunsetOutput = document.querySelector(".sunset-output")
 
 
 //Function to convert Unix timestamp to be used on sunrise & sunset
@@ -18,7 +18,7 @@ function timeConverter(UNIX_timestamp){
     const hour = a.getHours();
     const min = a.getMinutes();
     const sec = a.getSeconds();
-    const time = `${hour}:${min}:${sec}`;
+    const time = `${hour.toString().padStart(2,0)}:${min.toString().padStart(2,0)}:${sec.toString().padStart(2,0)}`;
     return time;
   }
 
