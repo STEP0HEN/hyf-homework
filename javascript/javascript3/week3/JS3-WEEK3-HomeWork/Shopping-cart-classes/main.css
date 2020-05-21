@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     box-sizing: border-box;
     text-align: center;
     line-height: 3em;
     font-size: larger;
+    background-color: burlywood;
 }
+
 li{
     list-style: none;
 }
 
 h1{
-    position: absolute;
+    color: brown;
 }

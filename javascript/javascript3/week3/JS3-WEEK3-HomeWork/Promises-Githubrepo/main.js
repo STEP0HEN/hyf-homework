@@ -31,7 +31,6 @@ const myClassmatesApi = () => {
 
 myClassmatesApi()
 .then(result =>{
-
     const stepheninfo = [`Full name : ${result[0].items[0].full_name}`,
     `hyf-homework repo url : ${result[0].items[0].url}`,
      `Full name : ${result[0].items[1].full_name}`,
