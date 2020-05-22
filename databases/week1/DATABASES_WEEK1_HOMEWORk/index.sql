@@ -35,14 +35,14 @@ SELECT
     description,
     due_date 
 FROM task 
-WHERE title REGEXP 'database' OR description REGEXP 'database';
+WHERE title LIKE '%database%' OR description LIKE '%database&';
  
 -- Get the title and status (as text) of all tasks
 SELECT 
 	status.id, 
     task.title, 
     status.name 
-FROM task JOIN status ON task.status_id = status_id;
+FROM task JOIN status ON task.status_id = status.id;
 
 -- Get the name of each status, along with a count of how many tasks have that status
 SELECT 
