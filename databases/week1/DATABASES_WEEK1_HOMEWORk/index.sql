@@ -35,7 +35,7 @@ SELECT
     description,
     due_date 
 FROM task 
-WHERE title LIKE '%database%' OR description LIKE '%database&';
+WHERE title LIKE '%database%' OR description LIKE '%database%';
  
 -- Get the title and status (as text) of all tasks
 SELECT 
