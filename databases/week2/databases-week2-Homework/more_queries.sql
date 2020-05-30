@@ -17,7 +17,7 @@ INNER JOIN status s ON t.status_id = s.id
 WHERE ut.user_id = (
     SELECT id 
     FROM user
-    WHERE name = 'Donald Duck'
+    WHERE name LIKE '%Donald Duck%'
 )
 AND s.id = (
     SELECT id
