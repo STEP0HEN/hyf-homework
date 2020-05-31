@@ -35,7 +35,7 @@ class ShoppingCart {
     
     removeProduct(product) {
         const  newProducts = this.products.filter((existingProduct => {
-            return existingProduct.name !== product.name && product.price
+            return existingProduct.name !== product.name
         }))
         this.products = newProducts
     };
