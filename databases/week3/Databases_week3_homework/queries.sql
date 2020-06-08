@@ -16,7 +16,7 @@ UPDATE meal SET price = price + 10, title = 'fish lasagna : TODAYS SPECIAL' WHER
 -- Delete a meal
 -- SET SQL_SAFE_UPDATES = 1;
 
-DELETE meal.* FROM meal WHERE id = 1;
+DELETE FROM meal WHERE id = 1;
 
 -- RESERVATION 
 -- Get all reservation 
@@ -68,7 +68,7 @@ FROM meal INNER JOIN reservation on meal.id = reservation.meal_id GROUP BY meal.
 SELECT * FROM meal WHERE title LIKE '%chicken%';
 
 -- Get meals that has been created between two dates
-SELECT * FROM meal WHERE created_date BETWEEN '2020-05-05 12:00:00' AND '2010-12-12 14:14:14';
+SELECT * FROM meal WHERE created_date BETWEEN '2020-05-05 12:00:00' AND '2020-12-12 14:14:14';
 
 
 -- Get only specific number of meals fx return only 5 meals
@@ -88,8 +88,8 @@ ORDER BY reservation.created_date DESC;
 
 
 -- Sort all meals by average number of stars in the reviews
-SELECT DISTINCT meal.title, AVG(review.stars) FROM meal
+SELECT meal.*, AVG(review.stars) FROM meal
 INNER JOIN review ON meal.id = review.meal_id
-GROUP BY meal.title
+GROUP BY meal.id
 ORDER BY AVG(review.stars) DESC;
 
