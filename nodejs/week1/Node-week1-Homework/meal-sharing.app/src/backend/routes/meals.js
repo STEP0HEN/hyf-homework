@@ -4,12 +4,13 @@ const router = express.Router();
 const meals = require("../data/meals.json");
 const reviews = require("../data/reviews.json");
 
-meals.forEach(meal => {
-    meal.review = reviews.filter(review => meal.id === review.mealdId);
-});
 
 
 router.get("/meals", (request, response) => {
+    meals.forEach((meal) => {
+        meal.reviews = reviews.filter((review) => meal.id === review.mealId);
+                return meal;
+        });
 	response.send(meals);
 });
 
