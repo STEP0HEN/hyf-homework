@@ -10,20 +10,11 @@ INNER JOIN (
 
 
 -- Get all taks for 'Donald Duck' where status 'not started' 
-SELECT t.title
-FROM task t
-INNER JOIN user_task ut ON t.id = ut.task_id
-INNER JOIN status s ON t.status_id = s.id 
-WHERE ut.user_id = (
-    SELECT id 
-    FROM user
-    WHERE name LIKE '%Donald Duck%'
-)
-AND s.id = (
-    SELECT id
-    FROM status
-    WHERE name = 'Not started'
-);
+SELECT DISTINCT user.name, task.id, task.title, task.description, status.name FROM user
+INNER JOIN user_task ON user.id = user_task.task_id
+INNER JOIN task ON task.id = user_task.task_id
+INNER JOIN status ON task.status_id = status_id
+WHERE user.name LIKE '%Donald Duck%' AND status.name = 'Not started';
 
 
 -- Get all task for 'Maryrose Meadows' that were created in september
