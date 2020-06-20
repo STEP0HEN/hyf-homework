@@ -16,7 +16,7 @@ class Circle {
 	}
 
 	getArea() {
-		const area = Math.PI * (this.radius * this.radius);
+		const area = Math.pow(this.radius,2) * Math.PI;
 		console.log(`The area of the circle is ${area.toFixed(3)}`);
 	}
 }
