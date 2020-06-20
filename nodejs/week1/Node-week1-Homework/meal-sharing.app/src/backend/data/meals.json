@@ -1,0 +1,42 @@
+[
+	{
+		"id": 1,
+		"title": "Indian food in the summer",
+		"maxNumberOfGuests": 5,
+		"description": "A nice night out eating delicious indian food",
+		"createdAt": "2019/12/7 14:34",
+		"price": 67
+	},
+	{
+		"id": 2,
+		"title": "Delicious meal made by Chef",
+		"maxNumberOfGuests": 7,
+		"description": "A delicious food made by our chef",
+		"createdAt": "2020/12/7 14:14",
+		"price": 80
+	},
+	{
+		"id": 3,
+		"title": "quiche",
+		"maxNumberOfGuests": 5,
+		"description": "Tasty Homemade quiche",
+		"createdAt": "2019/02/8 14:34",
+		"price": 50
+	},
+	{
+		"id": 4,
+		"title": "Danish meal for summer",
+		"maxNumberOfGuests": 8,
+		"description": "Eating a nice fløde kartoffler",
+		"createdAt": "2020/05/1 19:34",
+		"price": 120
+	},
+	{
+		"id": 5,
+		"title": "Chicken fried rice",
+		"maxNumberOfGuests": 5,
+		"description": "Fried rice with chicken",
+		"createdAt": "2019/09/7 16:50",
+		"price": 90
+	}
+]
