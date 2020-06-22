@@ -31,4 +31,7 @@ ON student (name);
 
 -- Add column to table
 
-ALTER TABLE class ADD COLUMN status ENUM('not started', 'ongoing', 'finished')
+ALTER TABLE class ADD COLUMN status ENUM('not started', 'ongoing', 'finished');
+
+--modified status column on class table and added default value
+ALTER TABLE class MODIFY COLUMN status ENUM('not started', 'ongoing', 'finished') DEFAULT 'not started';
