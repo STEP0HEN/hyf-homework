@@ -17,10 +17,11 @@ Hints:
 Find express documentation online.
 Use req.query and req.params properties on req object.
 */
+
+//USing req.Query
 app.get('/numbers/add',(request,response)=>{
-    const firstNumber = Number(request.query.first);
-    const secondNumber = Number(request.query.second);
-    const theSum = firstNumber + secondNumber; 
+    const {firstNumber,secondNumber} = request.query;
+    const theSum = Number(firstNumber) + Number(secondNumber); 
 if(!firstNumber && !secondNumber){
     response.send(`Please input a number`);
 }else {
@@ -29,10 +30,34 @@ if(!firstNumber && !secondNumber){
 });
 
 app.get('/numbers/multiply',(request,response)=>{
-    const firstNumber = Number(request.query.first);
-    const secondNumber = Number(request.query.second);
-    const theProduct = firstNumber * secondNumber; 
+    const {firstNumber,secondNumber} = request.query;
+    const theProduct = Number(firstNumber) * Number(secondNumber); 
     if(!firstNumber && !secondNumber){
+        response.send(`Please input a number`);
+    }else{
+
+        response.send(`the answer is ${theProduct}`);
+    };
+});
+
+
+//Using req.params
+app.get('/numbers/add/:first/:second',(request,response)=>{
+    const first = Number(request.params.first);
+    const second = Number(request.params.second);
+    const theSum = first + second; 
+if(!first && !second){
+    response.send(`Please input a number`);
+}else {
+    response.send(`the answer is ${theSum}`);
+}
+});
+
+app.get('/numbers/multiply/:first/:second',(request,response)=>{
+    const first = Number(request.params.first);
+    const second = Number(request.params.second);
+    const theProduct = first * second; 
+    if(!first && !second){
         response.send(`Please input a number`);
     }else{
 

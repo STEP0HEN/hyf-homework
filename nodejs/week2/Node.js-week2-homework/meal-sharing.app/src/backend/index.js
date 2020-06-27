@@ -12,12 +12,9 @@ const reviews = require('./routes/reviews.js');
 
 app.get("/", (request, response) => response.send("Hello world"));
 
-app.get("/meals", meals);
-app.get("/meals/:id", meals);
-app.get("/reservations", reservations);
-app.get("/reservations/:id",reservations);
-app.get("/reviews", reviews);
-app.get("/reviews/:id", reviews);
+app.use("/meals", meals);
+app.use("/reservations", reservations);
+app.use("/reviews", reviews);
 
 
 app.listen(port, () => {

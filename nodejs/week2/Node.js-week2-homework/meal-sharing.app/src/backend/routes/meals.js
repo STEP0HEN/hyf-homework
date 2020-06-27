@@ -3,11 +3,11 @@ const router = express.Router();
 
 const meals = require("../data/meals.json");
 
-router.get("/meals", (request, response) => {
+router.get("/", (request, response) => {
 	//meals
-	if (request.url === "/meals") {
+	if (Object.keys(request.query).length === 0) {
 		response.json(meals);
-	}
+	};
 	//Maxprice
 	if (request.query.maxPrice) {
 		const maxPriceInput = request.query.maxPrice;
@@ -47,16 +47,16 @@ router.get("/meals", (request, response) => {
 });
 
 //meals id
-router.get("/meals/:id", (request, response) => {
-	const mealId = Number(request.params.id);
-	const mealWithInputId = meals.filter((meal) => meal.id === mealId);
-	//handle no match and wrong inputs
-	if (mealWithInputId.length === 0) {
-		response.send("sorry no match");
-	} else {
-		//return meals that match id
-		response.json(mealWithInputId);
-	}
+router.get("/:id", (request, response) => {
+		const mealId = Number(request.params.id);
+		const mealWithInputId = meals.filter((meal) => meal.id === mealId);
+		//handle no match and wrong inputs
+		if (mealWithInputId.length === 0) {
+			response.send("sorry no match");
+		} else {
+			//return meals that match id
+			response.json(mealWithInputId);
+		}
 });
 
 module.exports = router;

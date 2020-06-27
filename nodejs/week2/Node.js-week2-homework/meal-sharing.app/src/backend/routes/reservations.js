@@ -3,11 +3,11 @@ const router = express.Router();
 
 const reservations = require("../data/reservations.json");
 
-router.get("/reservations", (request, response) => {
+router.get("/", (request, response) => {
 	response.send(reservations);
 });
 
-router.get("/reservations/:id", (request, response) => {
+router.get("/:id", (request, response) => {
 	const reservationId = Number(request.params.id);
 	const reservationsWithInputId = reservations.filter(
 		(reservation) => reservation.id === reservationId
