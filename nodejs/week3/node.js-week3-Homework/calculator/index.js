@@ -29,11 +29,11 @@ function calculatorFormular(method, arrayOfNumbers) {
 // Calculator using :method (path) parameter:
 calculator.get("/calculator/:method", (request, response) => {
 	const method = request.params.method;
-	const queryParams = Object.values(request.query);
-	const numsMerged = [].concat.apply([], queryParams);
-	const calculateQueryParams = numsMerged.map(Number);
-
-	const answer = calculatorFormular(method, calculateQueryParams);
+	const queryParams = Object.values(request.query).map((num) =>
+		Number(num.concat.apply([], Object.values(num)))
+	);
+	
+	const answer = calculatorFormular(method, queryParams);
 	response.json(answer);
 });
 
