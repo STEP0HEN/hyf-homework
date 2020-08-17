@@ -6,54 +6,43 @@ class Email {
 }
 
 class SpamDetector {
-	badWordCheck(email) {
+	hasBadWord(email) {
 		const badWords = ["viagra", "offer", "free", "business proposal"];
 
 		const emailBody = email.body;
-		const emailBodyIntoArray = emailBody.split(" ");
+		const words = emailBody.split(" ");
 
-		const badWordsInEmail = emailBodyIntoArray.filter((item) => {
-			return badWords.includes(item.toLowerCase());
+		const badWordsInEmail = words.filter((word) => {
+			return badWords.includes(word.toLowerCase());
 		});
 
-		if (badWordsInEmail.length !== 0) {
-			return true;
-		} else {
-			return false;
-		}
+		return badWordsInEmail.length !== 0;
 	}
 
 	subjectCheck(email) {
-		const emailSubject = email.subject;
-
-		if (emailSubject.toLowerCase() === "hello") {
+		if (email.subject.toLowerCase() === "hello") {
 			return true;
 		} else {
 			return false;
 		}
 	}
-	upperCaseCheck(email) {
-		const emailBody = email.body;
-		const emailBodyIntoArray = emailBody.split("");
-		const upperCaseArray = emailBodyIntoArray.filter((words) => {
-			return words == words.toUpperCase();
+
+	hasMostlyUpperCaseCharacters(text) {
+		const words = text.body.split(" ");
+		const upperCaseArray = words.filter((word) => {
+			return word === word.toUpperCase();
 		});
 
-		const percentageCheck =
-			(upperCaseArray.length * 100) / emailBodyIntoArray.length;
+		const percentageCheck = (upperCaseArray.length * 100) / words.length;
 
-		if (percentageCheck > 60) {
-			return true;
-		} else {
-			return false;
-		}
+		return percentageCheck > 60;
 	}
 
 	isSpam(email) {
 		if (
-			this.badWordCheck(email) === true ||
-			this.upperCaseCheck(email) === true ||
-			this.subjectCheck(email) === true
+			this.hasBadWord(email) ||
+			this.hasMostlyUpperCaseCharacters(email) ||
+			this.subjectCheck(email)
 		) {
 			return "It's a spam";
 		} else {
