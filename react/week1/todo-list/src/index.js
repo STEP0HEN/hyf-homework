@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Todo} from "./Todo";
-import {Title }from "./Title";
+import App from "./App";
 import "./index.css";
 
+const root = document.getElementById("root");
 
 ReactDOM.render(
-	<div className="container">
-		<Title />
-		<Todo />
-	</div>,
-	document.getElementById("root")
+  <div className="container">
+    <App />
+  </div>,
+  root
 );
